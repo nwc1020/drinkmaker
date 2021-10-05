@@ -1,0 +1,61 @@
+package com.example.coffeebuilder.drinks;
+
+import com.example.coffeebuilder.order.Drink;
+
+public class Coffee implements Drink {
+
+    private Boolean milk;
+    private Boolean sugar;
+    private Boolean lemon;
+    // note to self i would rather have something like we had in the pizza builder with pizza size
+    // except replacing it with a difference between coffee and tea since as of right now theres no
+    // difference however for sake of trying to stick to the uml im making coffee and tea seperate
+
+    public Coffee(Builder builder) {
+        this.milk = builder.milk;
+        this.sugar = builder.sugar;
+        this.lemon = builder.lemon;
+    }
+
+    @Override
+    public String getDescription() {
+        String description = "Coffee";
+        if(milk)
+            description += ", milk";
+        if(sugar)
+            description += ", sugar";
+        if(lemon)
+            description += ", lemon";
+        return description;
+    }
+
+    @Override
+    public static class Builder {
+        private Boolean milk;
+        private Boolean sugar;
+        private Boolean lemon;
+
+        public Builder() {
+        }
+
+        public Builder addMilk() {
+            this.milk = true;
+            return this;
+        }
+
+        public Builder addSugar() {
+            this.sugar = true;
+            return this;
+        }
+
+        public Builder addLemon() {
+            this.lemon = true;
+            return this;
+        }
+
+        public Coffee build() {
+            Coffee coffee = new Coffee(this);
+            return coffee;
+        }
+    }
+}

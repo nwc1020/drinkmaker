@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OrderTabFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.example.coffeebuilder.views.DrinkMenuView
+            android:id="@+id/order1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:action="@string/view"
+            app:description="1."
+            app:name="Order #1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="4dp"
+            android:background="@color/divider" />
+
+        <com.example.coffeebuilder.views.DrinkMenuView
+            android:id="@+id/order2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:action="@string/view"
+            app:description="2"
+            app:name="Order #2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="4dp"
+            android:background="@color/divider" />
+
+        <com.example.coffeebuilder.views.DrinkMenuView
+            android:id="@+id/order3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:action="@string/view"
+            app:description="3"
+            app:name="Order #3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="4dp"
+            android:background="@color/divider" />
+
+
+    </LinearLayout>
+</ScrollView>
